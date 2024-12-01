@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -b mail -d dist",
+    "deploy": "gh-pages -b main -d dist",
     "dev": "webpack serve",
     "build": "webpack --progress"
   },
