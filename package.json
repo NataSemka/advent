@@ -6,13 +6,16 @@
   "author": "NataliaSomka",
   "license": "MIT",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b main -d build",
     "dev": "webpack serve",
-    "build": "webpack"
+    "build": "webpack --progress"
   },
   "dependencies": {
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",
     "@mui/material": "^6.1.9",
+    "moment": "^2.30.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
