@@ -6,7 +6,7 @@
   "author": "NataliaSomka",
   "license": "MIT",
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -b mail -d public",
     "dev": "webpack serve",
     "build": "webpack --progress"
