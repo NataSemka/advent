@@ -19,3 +19,13 @@ body #root {
 .modal-content {
     padding: 24px
 }
+
+.ready {
+    animation: flip ease-in-out 2000ms infinite alternate;
+}
+
+@keyframes flip {
+    100% {
+      transform: rotateY(180deg);
+    }
+  }
