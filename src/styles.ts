@@ -1,7 +1,6 @@
 import { css } from '@emotion/react';
-import horizontal from '../public/images/calendar_backdrop.jpg';
 import imageDefault from '../public/images/default_bg.jpg';
-import vertical from '../public/images/vertical3.jpg';
+import vertical from '../public/images/vertical4.jpeg';
 import snowman from '../public/images/snowman.jpg';
 import img1 from '../public/images/1.jpg';
 import img2 from '../public/images/2.jpg';
@@ -27,12 +26,13 @@ import img21 from '../public/images/21.jpg';
 import img22 from '../public/images/22.jpg';
 import img23 from '../public/images/23.jpg';
 import img24 from '../public/images/24.jpg';
-import frame from '../public/images/frame.jpg';
+import frame from '../public/images/frame3.jpg';
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24];
 
 export const dialog = css({
     backgroundImage: `url(${frame})`,
+    backgroundColor: '#fff',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     '& .modal-content': {
@@ -44,7 +44,7 @@ export const dialog = css({
 })
 export const bg = (tablet: boolean) => css({
     width: '100%',
-    height: tablet ? '100vh' : '100%',
+    height: tablet ? '100vh' : 'auto',
     backgroundImage: tablet ? `url(${snowman})` : `url(${vertical})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat'
