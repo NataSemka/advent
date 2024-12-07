@@ -35,13 +35,13 @@ export const dialog = css({
     backgroundColor: '#fff',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    '& .modal-content': {
-        padding: '1.6em',
-        'p': {
-            marginBottom: '1em'
-        }
+});
+export const modalContent = css({
+    padding: '1.6em',
+    'p': {
+        marginBottom: '1em'
     }
-})
+});
 export const bg = (tablet: boolean) => css({
     width: '100%',
     height: tablet ? '100vh' : 'auto',
@@ -56,11 +56,11 @@ export const container = (laptop: boolean) => css({
     padding: '1.8em 0',
 });
 
-export const items = (maxWidth: string) => css({
+export const items = (laptop: boolean) => css({
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    maxWidth: maxWidth,
+    maxWidth: laptop ? '970px' : '100%',
     gap: '1em',
 });
 

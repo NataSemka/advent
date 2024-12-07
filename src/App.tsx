@@ -47,9 +47,15 @@ function App() {
   return (
     <Box sx={styles.bg(tablet)}>
       <Container sx={styles.container(laptop)}>
-        <Box sx={styles.items(laptop ? '970px' : '100%')}>
+        <Box sx={styles.items(laptop)}>
           {backendData.map((day, index) => 
-            <Box id={`day${day.id}`} className={`${isOpen(day.id) ? 'isOpen' : ''} ${!isDisabled(day.id) && !isOpen(day.id) ? 'ready' : ''}`} key={day.id} sx={styles.item(size, index)} onClick={() => handleOpen(day)}>
+            <Box
+              key={day.id}
+              id={`day${day.id}`}
+              className={`${isOpen(day.id) ? 'isOpen' : ''} ${!isDisabled(day.id) && !isOpen(day.id) ? 'ready' : ''}`}
+              sx={styles.item(size, index)}
+              onClick={() => handleOpen(day)}
+            >
               <Box sx={styles.itemNumber}>{index + 1}</Box>
             </Box>
           )}
@@ -58,14 +64,12 @@ function App() {
           open={open}
           sx={styles.dialog}
           onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
         >
-          <Box className='modal-content'>
-            <Typography id="modal-modal-title" variant="body1" component="p">
+          <Box sx={styles.modalContent}>
+            <Typography variant="body1" component="p">
               {currentDayInfo?.text}
             </Typography>
-            <Link href={currentDayInfo?.url}>Читати більше</Link>
+            {currentDayInfo?.url && <Link href={currentDayInfo?.url}>Читати більше</Link>}
           </Box>
         </Dialog>
       </Container>
